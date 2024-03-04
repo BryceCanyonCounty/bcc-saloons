@@ -10,6 +10,7 @@ This is a script to provide everything needed for brewing alcohol and moonshine 
 ## Dependencies
 -  Requires MariaDB version 10.11 and above or MySQL verions 8.0 and above.
 -  Requires bcc-crypt
+-  Requires bcc-utils
 
 ## Usage
 
