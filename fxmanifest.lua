@@ -25,3 +25,5 @@ server_scripts {
 }
 
 files { 'items/*' }
+
+version '1.0.0'
