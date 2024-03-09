@@ -1,0 +1,20 @@
+Locales['ro'] = {
+    BrewMenu = 'Optiuni de preparare',
+    BrewDesc = 'Fiecare Moonshine necesita mai multe etape pentru a fi produs',
+    BrewPrompt = 'Prepara',
+    BuildPrompt = 'Construieste',
+    DestroyPrompt = 'Distruge',
+    PlacingProp = 'Se construieste...',
+    StillPlaced = 'Ai plasat un alambic',
+    BarrelPlaced = 'Ai plasat un butoi',
+    DestroyProp = 'Distrugere în curs...',
+	CurrentlyBrewing = 'Se prepara',
+    BrewCompleted = 'Preparare finalizata',
+    TookIngredients = 'Ingredientele au fost preluate',
+    NoIngredients = "Nu aveai ingredientele necesare",
+    FinishBrewing = 'Preparare finalizata si colectata',
+    FullInventory = 'Inventarul este plin',
+    FullItem = 'Nu mai poti cara acest obiect',
+    StillDestroyed = 'Alambic distrus',
+    StillPickedUp = 'Alambic ridicat'
+}
