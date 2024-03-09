@@ -18,33 +18,9 @@ Destroying = nil
 
 BccUtils = exports['bcc-utils'].initiate()
 
-function SetupBuildPrompt()
-    local str = _U('BuildPrompt')
-    BuildPrompt = Citizen.InvokeNative(0x04F97DE45A519419)
-    PromptSetControlAction(BuildPrompt, Config.Keys.r)
-    str = CreateVarString(10, 'LITERAL_STRING', str)
-    PromptSetText(BuildPrompt, str)
-    PromptSetEnabled(BuildPrompt, false)
-    PromptSetVisible(BuildPrompt, false)
-    PromptSetHoldMode(BuildPrompt, true)
-    PromptRegisterEnd(BuildPrompt)
-end
-
-function SetupDelPrompt()
-    local str = _U('DestroyPrompt')
-    DelPrompt = Citizen.InvokeNative(0x04F97DE45A519419)
-    PromptSetControlAction(DelPrompt, Config.Keys.e)
-    str = CreateVarString(10, 'LITERAL_STRING', str)
-    PromptSetText(DelPrompt, str)
-    PromptSetEnabled(DelPrompt, false)
-    PromptSetVisible(DelPrompt, false)
-    PromptSetHoldMode(DelPrompt, true)
-    PromptRegisterEnd(DelPrompt)
-end
-
---RegisterNetEvent("vorp:SelectedCharacter", function()
+RegisterNetEvent("vorp:SelectedCharacter", function()
 TriggerServerEvent('bcc-brewing:GetPropsFromWorld')
---end)
+end)
 
 RegisterNetEvent("bcc-brewing:SendPropsFromWorld", function(sentstills)
     stills = sentstills
@@ -330,6 +306,7 @@ AddEventHandler('bcc-brewing:placeProp', function(propName)
                 TriggerServerEvent('bcc-brewing:SaveToDB', Config.Props.still, PropPos.x, PropPos.y, PropPos.z,
                     PropHeading)
                 TriggerEvent("vorp:TipBottom", _U('StillPlaced'), 4000)
+                --this little logic is from vorp moonshiner, turning it transparent and placing it
                 TempObj = CreateObject(object, PropPos.x, PropPos.y, PropPos.z, false, true, false)
                 SetEntityHeading(TempObj, PropHeading)
                 PlaceObjectOnGroundProperly(TempObj)
@@ -340,6 +317,7 @@ AddEventHandler('bcc-brewing:placeProp', function(propName)
                     PropHeading)
                 TriggerServerEvent('bcc-brewing:GetPropsFromWorld')
                 TriggerEvent("vorp:TipBottom", _U('BarrelPlaced'), 4000)
+                --this little logic is from vorp moonshiner, turning it transparent and placing it
                 TempObj = CreateObject(object, PropPos.x, PropPos.y, PropPos.z, true, true, false)
                 SetEntityHeading(TempObj, PropHeading)
                 PlaceObjectOnGroundProperly(TempObj)
