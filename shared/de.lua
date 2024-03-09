@@ -1,4 +1,4 @@
-Locales['en'] = {
+Locales['de'] = {
     BrewMenu = 'Brauen Optionen',
     BrewDesc = 'Jeder Moonshine ist ein mehrstufiger Prozess',
     BrewPrompt = 'Brauen',
