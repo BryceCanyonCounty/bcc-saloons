@@ -1,47 +1,45 @@
-# BCC - Scene
+Installation
+Ensure that you have RedM installed and running.
+Download the bcc-saloons script files.
+Place the bcc-saloons script folder into the resources directory of your RedM server.
+Add ensure bcc-saloons to your server.cfg file to start the script on server startup.
 
-> A RedM scene text free placement system for [Vorp Core](http://docs.vorpcore.com:3000/)
+Dependencies
+Requires MariaDB version 10.11 and above or MySQL verions 8.0 and above.
+Requires bcc-crypt
+Requires bcc-utils
+Requires feather-menu
 
-Join the [VORP Community Discord](https://discord.gg/23MPbQ6)
+Usage
 
-## Features
-1. Freely Add Text to a scene
-2. Remove Text in a scene
-3. Update Text in a scene
-4. Hotkeys and/or commands
-5. Easily configurateble settings
-6. Json file storage OR SQL Database storage
-7. Custom UI
+Brewing Moonshine
+Brewing moonshine is a process that takes step, you have to ferment your mash and alcohol, then once distilling each stage will require different ingredients and different amount of time. Once completed you collect your brew.
 
-## Installation
-1. Download this repo/codebase
-2. Extract and place `bcc-scene` into your `resources` folder
-3. Add `ensure bcc-scene` to your `server.cfg` file
-4. Restart your server (unless you have nightly restarts)
+Stills
+Stills produce smoke when brewing, and are multi staged crafting. This could be for any drink or moonshine you want, using the still prop will take stages no matter what.
 
-## How-to-use
-1. Type `/scene` to activate tracking ball _(Or press Z if hotkeys are enabled)_
-![image](https://user-images.githubusercontent.com/10902965/166846929-739318de-7b7d-482e-9702-6b2d4f03a82c.png)
-2. Type `/scene:place` will save the coords of the ball and pop up a text prompt _(Or press X if hotkeys are enabled)_
-![image](https://user-images.githubusercontent.com/10902965/166847059-a12eeb03-2f48-409f-bcb7-b5425519f390.png)
-3. Type what you want to display on the scene
-4. Click enter
-5. Your text should appear in the given location.
-![image](https://user-images.githubusercontent.com/10902965/166847110-7be69bab-6ae3-4330-b6ab-a016897e560f.png)
+Barrels
+Barrels are a single stage brewing use to create alcohols and mashes normally.
 
-### How to Edit
-1. Stand near your scene text, or enable scene ball and place it on your text
-2. Press B to display the scene menu
-3. Navigate with your cursor to edit your scene
-![image](https://user-images.githubusercontent.com/10902965/202895902-90798e03-8dc4-4253-8a5e-91edd57046f2.png)
+Features
+-Smoke from stills when brewing
 
+-Stills that are brewing can not be opened until done brewing.
 
-## How-to-configure
-All configurations available in `/config.lua`
+-Ingredients can be chosen to be shown in menu, with notifications or not at all making players have to figure it out.
 
-## Disclaimers and Credits
-- Heavily inspired by rickx's [lto_scene](https://github.com/zelbeus/ricx_scene).
-- Heavily inspired by a similar old FiveM script [nh-scenes](https://github.com/nerohiro/nh-scenes). 
+-Stills auto despawn and respawn when entering and leaving the area
 
- ## Dependency
- - Vorp Core
+-Animations on placing and destroying etc
+
+Planned Features
+-NPC Piano Playing
+
+-Saloon Storages
+
+-Tasks to do for some cash
+
+-More
+
+Contributing
+Contributions to the bcc-saloons script are welcome! If you have any bug fixes, improvements, or new feature suggestions, feel free to open a pull request on the GitHub repository.
