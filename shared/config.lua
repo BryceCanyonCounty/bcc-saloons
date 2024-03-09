@@ -2,8 +2,6 @@ Config = {}
 
 Config.defaultlang = 'en'
 
-Config.menu = 'vorp_menu'         --vorp_menu or menuapi
-
 Config.InteractDistance = 1.0   -- Distance to interact with still
 Config.SpawnDistance = 50.0     -- Distance that stills will spawn within
 Config.GivePropsBack = true     -- True Get item back on destroy, false don't
@@ -152,7 +150,7 @@ Config.Moonshines = {
 
 
 Config.WebhookInfo = {
-    Title = 'BCC Stashes',
+    Title = 'BCC Saloon',
     -- Webhook =  '', Needed if using, the rest are optional
     -- Color = '',
     -- Name = '',
