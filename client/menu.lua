@@ -137,14 +137,14 @@ function OpenMashMenu(id, stage, currentbrew)
         slot = "header",
     })
     for k, value in pairs(Config.MashesandAlcohol) do
-        if Config.ShowIngredients.Menu then
-            TextDisplay = MashMenu:RegisterElement('textdisplay', {
-                value = value[stage].Tip,
-                style = {}
-            })
-        elseif Config.ShowIngredients.Notify then
+        if Config.ShowIngredients.Notify then
             TextDisplay = MashMenu:RegisterElement('textdisplay', {
                 value = "Brewing Mash is a singular stage",
+                style = {}
+            })
+        elseif Config.ShowIngredients.Menu then
+            TextDisplay = MashMenu:RegisterElement('textdisplay', {
+                value = value.Tip,
                 style = {}
             })
         end
@@ -154,7 +154,7 @@ function OpenMashMenu(id, stage, currentbrew)
             },
         }, function()
             selected = value.label
-            TriggerServerEvent('bcc-brewing:CheckIngredients', id, nil, selected)
+            TriggerServerEvent('bcc-brewing:CheckIngredients', id, nil, k)
             BrewingMenu:Close()
             -- This gets triggered whenever the button is clicked
         end)
