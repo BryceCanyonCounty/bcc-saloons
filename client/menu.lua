@@ -129,7 +129,7 @@ function OpenMashMenu(id, stage, currentbrew)
         style = {}
     })
     MashMenu:RegisterElement('subheader', {
-        value = _U('BrewDesc'),
+        value = _U('BrewDesc2'),
         slot = "header",
         style = {}
     })
@@ -184,9 +184,4 @@ RegisterNetEvent('FeatherMenu:closed', function(menudata)
     FreezeEntityPosition(PlayerPedId(), false)
     ClearPedTasks(PlayerPedId())
 end)
---[[
-TriggerServerEvent('bcc-brewing:ChangeStage', id, -1, 1, currentbrew)
-CloseMenu(menu)
-Wait(Config.MashesandAlcohol[currentbrew].fermenttime * 60000)
-TriggerServerEvent('bcc-brewing:ChangeStage', id, -1, 0, 'None')
-]]
+
