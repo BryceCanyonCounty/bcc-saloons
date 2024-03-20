@@ -1,6 +1,7 @@
 Locales['en'] = {
     BrewMenu = 'Brew Options',
     BrewDesc = 'Each Moonshine is a multi step process',
+    BrewDesc2 = 'Brewing mash and alcohol',
     BrewPrompt = 'Brew',
     BuildPrompt = 'Build',
     DestroyPrompt = 'Destroy',
