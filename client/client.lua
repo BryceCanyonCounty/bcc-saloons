@@ -127,6 +127,8 @@ CreateThread(function()
 
         if isNearBarrel and not placing then
             PromptGroup:ShowGroup('Brewing')
+            firstprompt:TogglePrompt(true)
+            secondprompt:TogglePrompt(true)
 
             if firstprompt:HasCompleted() then
                 TriggerServerEvent("bcc-brewing:GetCoords", x, y, z)
@@ -285,7 +287,7 @@ AddEventHandler('bcc-brewing:placeProp', function(propName)
     AttachEntityToEntity(PlacingObj, PlayerPedId(), 0, 0.0, 1.0, -0.7, 0.0, 0.0, 0.0, true, false, false, false, false,
         true)
     while placing do
-        Wait(10)
+        Wait(5)
         if prompt == false then
             PromptGroup:ShowGroup('Brewing')
             firstprompt:TogglePrompt(true)
